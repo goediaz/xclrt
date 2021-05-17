@@ -1,0 +1,11 @@
+@import './colors';
+
+@mixin strong-title($color = $title-main) {
+  font-family: 'Fredoka One', cursive;
+  color: $color;
+}
+
+@mixin light-title($color = $text-main) {
+  font-family: 'Fredoka One', cursive;
+  color: $color;
+}
