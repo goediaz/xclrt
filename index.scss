@@ -33,12 +33,10 @@ body {
     .products {
       &__container {
         @include common-components;
-        border: solid 1px red;
         display: flex;
         flex-direction: column;
         padding: 0;
         width: 71%;
-  
       }
 
       // each item start
@@ -57,16 +55,19 @@ body {
         margin-left: -30px;
 
         &-image {
-          background: black;
-          border: black solid;
           display: block;
           height: 100%;
-          width: 47px;
-       
+          width: 50px;
+          height: 47px;
+          border: solid 2px $border-light;
+          border-radius: 5px;
+          background: $white;
+          
           &-container {
             display: flex;
-            height: 47px;
+            // height: 100%;
             width: 150px;
+            border-radius: 3px;
           }
         }
 

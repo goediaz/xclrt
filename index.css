@@ -45,7 +45,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 10px;
-  border: solid 1px red;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -77,19 +76,21 @@ body {
 }
 
 .cart__container .products__item-image {
-  background: black;
-  border: black solid;
   display: block;
   height: 100%;
-  width: 47px;
+  width: 50px;
+  height: 47px;
+  border: solid 2px #9393a0;
+  border-radius: 5px;
+  background: #fff;
 }
 
 .cart__container .products__item-image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 47px;
   width: 150px;
+  border-radius: 3px;
 }
 
 .cart__container .products__item-name {
