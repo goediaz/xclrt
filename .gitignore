@@ -1,0 +1,21 @@
+
+### VisualStudioCode ###
+.vscode
+.idea
+
+# Optional eslint cache
+.eslintcache
+
+
+# dotenv environment variables file
+.env
+.env.test
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+node_modules/
+
+# testing
+/coverage
