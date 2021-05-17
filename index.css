@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap");
 *,
 *::after,
 *::before {
@@ -8,6 +9,7 @@
 }
 
 body {
+  background-color: #212140;
   padding: 37px;
 }
 
@@ -21,7 +23,151 @@ body {
 }
 
 .cart__container {
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  background-color: white;
   border: solid 1px;
+  border-radius: 5px;
   width: 728px;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cart__container .products__container {
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  border: solid 1px red;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  width: 71%;
+}
+
+.cart__container .products__list {
+  padding: 10px 15px;
+}
+
+.cart__container .products__item {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin-bottom: 22px;
+  margin-left: -30px;
+}
+
+.cart__container .products__item-image {
+  background: black;
+  border: black solid;
+  display: block;
+  height: 100%;
+  width: 47px;
+}
+
+.cart__container .products__item-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 47px;
+  width: 150px;
+}
+
+.cart__container .products__item-name {
+  font-family: 'Fredoka One', cursive;
+  color: #919199;
+  margin: 13px;
+  font-size: 10px;
+  width: 70px;
+}
+
+.cart__container .products__item-name > strong {
+  font-family: 'Bilbo', cursive;
+  color: #919199;
+  color: #555;
+  font-size: 10px;
+  margin: 13px;
+  margin: 0;
+  min-width: 100%;
+}
+
+.cart__container .products__item-counter {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 35px;
+  width: 50px;
+  margin-left: 15px;
+}
+
+.cart__container .products__item-remove, .cart__container .products__item-add {
+  background: none;
+  border: none;
+  color: #7350ff;
+  font-weight: 900;
+}
+
+.cart__container .products__item-quantity {
+  border: solid 2px #9393a0;
+  width: 26px;
+  margin-top: 3px;
+  padding: 1px 7px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  color: #333;
+}
+
+.cart__container .products__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
+
+.cart__container .products__main-title::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: solid 2px;
+  margin-top: 13px;
+  width: 95%;
+}
+
+.cart__container .products__main-subtitle {
+  font-family: 'Bilbo', cursive;
+  color: #919199;
+  color: #555;
+  font-size: 10px;
+  margin: 13px;
+  color: #555;
+  font-size: 10px;
+  margin: 5px 13px;
 }
 /*# sourceMappingURL=index.css.map */

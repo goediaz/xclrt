@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap');
 @import './styles/colors';
+@import './styles/mixins';
+
 *,
 *::after,
 *::before {
@@ -12,7 +12,7 @@
 }
 
 body {
-  // background-color: #212140;
+  background-color: #212140;
   padding: 37px;
 }
 .main {
@@ -22,28 +22,118 @@ body {
 
 .cart {
   &__container {
+    @include common-components;
+    background-color: white;
     border: solid 1px;
+    border-radius: 5px;
     width: 728px;
     display: flex;
     flex-direction: row;
-  }
-}
 
-.products {
-  &__container {
+    .products {
+      &__container {
+        @include common-components;
+        border: solid 1px red;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 71%;
+  
+      }
+
+      // each item start
+      &__list {
+        padding: 10px 15px;
+      }
+
+      &__item {
+        @include strong-title();
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+        justify-content: space-around;
+        list-style: none;
+        margin-bottom: 22px;
+        margin-left: -30px;
+
+        &-image {
+          background: black;
+          border: black solid;
+          display: block;
+          height: 100%;
+          width: 47px;
+       
+          &-container {
+            display: flex;
+            height: 47px;
+            width: 150px;
+          }
+        }
+
+        &-name {
+          @include strong-title($text-main);
+          margin: 13px;
+          font-size: 10px;
+          width: 70px;
+
+          > strong {
+            @include light-title($text-main);
+            margin: 0;
+            min-width: 100%;
+          }
+          
+        }
+        &-counter {
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          height: 35px;
+          width: 50px;
+          margin-left: 15px;
+        }
+
+        &-remove,
+        &-add {
+          background: none;
+          border: none;
+          color: $accent-color;
+          font-weight: 900;
+        }
+
+        &-quantity {
+          border: solid 2px $border-light;
+          width: 26px;
+          margin-top: 3px;
+          padding: 1px 7px;
+          height: 26px;
+          border-radius: 4px;
+          font-size: 10px;
+          font-weight: 900;
+          color: #333;
+        }
+      }
     
-element.style {
-  border: solid 1px red;
-  width: 71%;
-  display: flex;
-  flex-direction: column;
+      // each item ends
+      &__main-title {
+          @include strong-title;
+          font-size: 12px;
+          margin-left: 17px;
+          margin-bottom: 20px;
+          &::after {
+            content: '';
+            display: flex;
+            border-top: solid 2px;
+            margin-top: 13px;
+            width: 95%;
+          }
+      }
+
+      &__main-subtitle {
+        @include light-title;
+        color: #555;
+        font-size: 10px;
+        margin: 5px 13px;
+      }
+    }
   }
-}
-
-.title-fonts {
-  font-family: 'Fredoka One', cursive;
-}
-
-.subtitle-fonts {
-  font-family: 'Fredoka One', cursive;
 }
