@@ -10,6 +10,6 @@ const store = {
   currentPage: 1,
   cart: {
     // eslint-disable-next-line no-undef
-    products: [{ product: products[0], quantity: 1 }]
+    products: []
   }
 };

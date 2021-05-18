@@ -1,10 +1,29 @@
-const updateShoppingCart = () => {
+function countTotalItems() {
+  let total = 0;
+  // eslint-disable-next-line no-undef
+  for (let i = 0; i < store.cart.products.length; i += 1) {
+    total += store.cart.products[i].quantity;
+  }
+  return total;
+}
 
-  // window.localStorage.getItem("temperature", "100");
-  // temperature = window.localStorage.getItem("temperature");
-};
+function getOverallCost() {
+  let totalCost = 0;
+  for (let i = 0; i < store.cart.products.length; i += 1) {
+    totalCost += store.cart.products[i].totalPrice;
+  }
+  return totalCost;
+}
 
-// eslint-disable-next-line no-undef
+function updateShoppingCartView() {
+  const node = document.getElementById('cart_overview');
+  const totalItems = countTotalItems();
+  node.innerHTML = `Total Items <strong class="products__total-qty">${totalItems}<strong>>`;
+  const overallCost = getOverallCost();
+  const costNode = document.getElementById('total-cost');
+  costNode.innerHTML = `TOTAL COST <strong class="products__total-cost">${overallCost} €<strong>`;
+}
+
 const handleSubstract = (id, qty, price) => {
   const input = document.getElementById(`input-${id}`);
   input.value = +qty > 0 ? qty - 1 : qty;
@@ -22,11 +41,13 @@ const handleAdd = (id, qty, price) => {
   refElement.innerText = +input.value * +price;
   // eslint-disable-next-line no-undef
   addToShoppingCart(id, newQty);
+  updateShoppingCartView();
 };
 
 const createDomElment = (nodeName, nodeContent, nodeClass, nodeAttr, attrValue) => {
   const newNode = document.createElement(nodeName);
   newNode.innerText += nodeContent;
+
   if (nodeClass) {
     newNode.classList.add(nodeClass);
   }

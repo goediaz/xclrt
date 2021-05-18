@@ -36,7 +36,11 @@ function addToShoppingCart(productId, qty) {
     ];
   } else {
     let newCartProducts = store.cart.products.filter((item) => item.product.id !== productId);
-    const item = { product: productToAdd, qty, totalPrice: getPriceOrDiscount(productToAdd, qty) };
+    const item = {
+      product: productToAdd,
+      quantity: qty,
+      totalPrice: getPriceOrDiscount(productToAdd, qty)
+    };
     newCartProducts = [...newCartProducts, item];
     store.cart = { products: newCartProducts };
   }
