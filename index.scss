@@ -32,7 +32,9 @@ body {
     width: calc(30% + 30px);
 
   }
-
+  &__total-cost {
+    align-self: flex-end;
+  }
   &__main-title {
     @include strong-title;
     font-size: 12px;

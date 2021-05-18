@@ -3,9 +3,8 @@
 function getPriceOrDiscount(product, qty = 1) {
   // eslint-disable-next-line no-undef
   const promo = promotions.find((promotion) => promotion.code === product.code);
-  debugger;
   let value = 0;
-  switch (promo.code) {
+  switch (promo?.code) {
     case 'GOKU':
       if (qty % 2 === 0) {
         value = (product.price * qty) * promo.price;

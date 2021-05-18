@@ -38,6 +38,11 @@ body {
   width: calc(30% + 30px);
 }
 
+.cart__total-cost {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 .cart__main-title {
   font-family: 'Fredoka One', cursive;
   color: #212140;

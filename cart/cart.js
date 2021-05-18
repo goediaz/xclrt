@@ -15,13 +15,34 @@ function getOverallCost() {
   return totalCost;
 }
 
+const createDomElment = (nodeName, nodeContent, nodeClass, nodeAttr, attrValue) => {
+  const newNode = document.createElement(nodeName);
+  newNode.innerText += nodeContent;
+
+  if (nodeClass) {
+    newNode.classList.add(nodeClass);
+  }
+
+  if (nodeAttr) {
+    newNode.setAttribute(nodeAttr, attrValue);
+  }
+
+  return newNode;
+};
+
 function updateShoppingCartView() {
   const node = document.getElementById('cart_overview');
   const totalItems = countTotalItems();
   node.innerHTML = `Total Items <strong class="products__total-qty">${totalItems}<strong>>`;
   const overallCost = getOverallCost();
   const costNode = document.getElementById('total-cost');
-  costNode.innerHTML = `TOTAL COST <strong class="products__total-cost">${overallCost} €<strong>`;
+  costNode.innerHTML = `TOTAL COST <strong class="cart__total-cost">${overallCost} €<strong>`;
+  const cartContainer = document.getElementById('cart_products');
+  cartContainer.innerHTML = '';
+  store.cart.products.forEach((item) => {
+    const itemNode = createDomElment('li', `${item.product?.name} x ${item.quantity} -${item.product?.price} € = ${item.totalPrice} €`, '', '');
+    cartContainer.append(itemNode);
+  });
 }
 
 const handleSubstract = (id, qty, price) => {
@@ -45,20 +66,6 @@ const handleAdd = (id, qty, price) => {
   updateShoppingCartView();
 };
 
-const createDomElment = (nodeName, nodeContent, nodeClass, nodeAttr, attrValue) => {
-  const newNode = document.createElement(nodeName);
-  newNode.innerText += nodeContent;
-
-  if (nodeClass) {
-    newNode.classList.add(nodeClass);
-  }
-
-  if (nodeAttr) {
-    newNode.setAttribute(nodeAttr, attrValue);
-  }
-
-  return newNode;
-};
 
 // FIXME
 // This is a way long mehtod, due the quantity of html elements, would be good to see if I can
