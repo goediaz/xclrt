@@ -16,11 +16,12 @@ const handleSubstract = (id, qty, price) => {
 
 const handleAdd = (id, qty, price) => {
   const input = document.getElementById(`input-${id}`);
-  input.value = +qty + 1;
+  const newQty = +qty + 1;
+  input.value = newQty;
   const refElement = document.getElementById(`total-price-${id}`);
   refElement.innerText = +input.value * +price;
-  addToShoppingCart(id, qty);
-  // const product = store.products.find((x) => x.id === id);
+  // eslint-disable-next-line no-undef
+  addToShoppingCart(id, newQty);
 };
 
 const createDomElment = (nodeName, nodeContent, nodeClass, nodeAttr, attrValue) => {
