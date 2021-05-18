@@ -30,6 +30,7 @@ const handleSubstract = (id, qty, price) => {
   const refElement = document.getElementById(`total-price-${id}`);
   refElement.innerText = +input.value * +price;
   window.localStorage.setItem(id, price, input.value);
+  // eslint-disable-next-line no-undef
   updateShoppingCart();
 };
 
