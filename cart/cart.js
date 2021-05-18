@@ -47,12 +47,12 @@ function updateShoppingCartView() {
 
 const handleSubstract = (id, qty, price) => {
   const input = document.getElementById(`input-${id}`);
-  input.value = +qty > 0 ? qty - 1 : qty;
+  const newQty = +qty > 0 ? qty - 1 : qty;
+  input.value = newQty;
   const refElement = document.getElementById(`total-price-${id}`);
   refElement.innerText = +input.value * +price;
-  window.localStorage.setItem(id, price, input.value);
-  // eslint-disable-next-line no-undef
-  updateShoppingCart();
+  addToShoppingCart(id, newQty);
+  updateShoppingCartView();
 };
 
 const handleAdd = (id, qty, price) => {
@@ -65,7 +65,6 @@ const handleAdd = (id, qty, price) => {
   addToShoppingCart(id, newQty);
   updateShoppingCartView();
 };
-
 
 // FIXME
 // This is a way long mehtod, due the quantity of html elements, would be good to see if I can

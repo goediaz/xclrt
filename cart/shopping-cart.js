@@ -28,6 +28,7 @@ function getPriceOrDiscount(product, qty = 1) {
 }
 
 function addToShoppingCart(productId, qty) {
+  debugger;
   const existingCartProduct = store.cart.products.find(({ product }) => product.id === productId);
   const productToAdd = store.products.find((product) => product.id === productId);
 
