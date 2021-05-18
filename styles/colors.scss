@@ -7,6 +7,8 @@ $_grey_light: #f3f3f3;
 $_grey_light1: #ececef;
 $_grey_light2: #9393a0;
 $_grey_medium1: #919199;
+$_grey_dark: #777;
+
 
 $white: #fff;
 
@@ -17,6 +19,7 @@ $accent-color: $_blue_medium;
 // texts
 $title-main: $_blue_dark2;
 $text-main: $_grey_medium1; 
-$accent-color: $_blue_medium;
+$text-accent: $_blue_medium;
 // borders
 $border-light: $_grey_light2;
+$border-medium: $_grey_dark;

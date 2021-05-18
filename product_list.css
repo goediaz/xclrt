@@ -1,0 +1,124 @@
+.products__container {
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  width: 71%;
+}
+
+.products__main-subtitle {
+  font-family: 'Bilbo', cursive;
+  color: #919199;
+  color: #555;
+  font-size: 10px;
+  margin: 13px;
+  color: #555;
+  font-size: 10px;
+  margin: 5px 13px;
+}
+
+.products__list {
+  padding: 10px 15px;
+}
+
+.products__item {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin-bottom: 22px;
+  margin-left: -30px;
+}
+
+.products__item-image {
+  display: block;
+  height: 100%;
+  width: 50px;
+  height: 47px;
+  border: solid 2px #9393a0;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.products__item-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  border-radius: 3px;
+}
+
+.products__item-name {
+  font-family: 'Fredoka One', cursive;
+  color: #7350ff;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 10px;
+  margin: 13px;
+  width: 70px;
+}
+
+.products__item-name > strong {
+  color: white;
+  font-family: 'Bilbo', cursive;
+  color: #919199;
+  color: #555;
+  font-size: 10px;
+  margin: 13px;
+  margin: 0;
+  min-width: 100%;
+}
+
+.products__item-counter {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 35px;
+  width: 50px;
+  margin-left: 15px;
+}
+
+.products__item-remove, .products__item-add {
+  background: none;
+  border: none;
+  color: #7350ff;
+  font-weight: 900;
+}
+
+.products__item-quantity {
+  border: solid 2px #9393a0;
+  width: 26px;
+  margin-top: 3px;
+  padding: 1px 7px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  color: #333;
+}
+/*# sourceMappingURL=product_list.css.map */

@@ -1,0 +1,70 @@
+.cart__summary {
+  background: #f3f3f3;
+  border-top-right-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: -12px;
+  margin-top: -15px;
+  padding-top: 26px;
+  width: calc(30% + 7px);
+}
+
+.cart__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
+
+.cart__main-title::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: solid 1px #9393a0;
+  opacity: 0.5;
+  margin-top: 13px;
+  width: 95%;
+}
+
+.cart__main-subtitle {
+  font-family: 'Bilbo', cursive;
+  color: #919199;
+  color: #555;
+  font-size: 10px;
+  margin: 13px;
+  color: #555;
+  font-size: 10px;
+  margin: 5px 13px;
+}
+
+.cart__products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  border: solid 1px;
+}
+
+.cart__total-cost {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.cart__checkout {
+  background-color: #7350ff;
+  color: white;
+  font-weight: 900;
+  height: 30px;
+  margin: 4% 12%;
+  width: 78.1%;
+  border: none;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=cart-summary.css.map */

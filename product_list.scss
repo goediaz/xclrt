@@ -1,0 +1,95 @@
+@import './styles/colors';
+@import './styles/mixins';
+
+.products {
+  &__container {
+    @include common-components;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 71%;
+  }
+
+  &__main-subtitle {
+    @include light-title;
+    color: #555;
+    font-size: 10px;
+    margin: 5px 13px;
+  }
+
+  &__list {
+    padding: 10px 15px;
+  }
+
+  &__item {
+    @include strong-title();
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 22px;
+    margin-left: -30px;
+
+    &-image {
+      display: block;
+      height: 100%;
+      width: 50px;
+      height: 47px;
+      border: solid 2px $border-light;
+      border-radius: 5px;
+      background: $white;
+      
+      &-container {
+        display: flex;
+        width: 150px;
+        border-radius: 3px;
+      }
+    }
+
+    &-name {
+      @include text-accented;
+      display: flex;
+      flex-direction: column;
+      font-size: 10px;
+      margin: 13px;
+      width: 70px;
+
+      > strong {
+        color: white;
+        @include light-title($text-main);
+        margin: 0;
+        min-width: 100%;
+      }
+      
+    }
+    &-counter {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      height: 35px;
+      width: 50px;
+      margin-left: 15px;
+    }
+
+    &-remove,
+    &-add {
+      background: none;
+      border: none;
+      color: $accent-color;
+      font-weight: 900;
+    }
+
+    &-quantity {
+      border: solid 2px $border-light;
+      width: 26px;
+      margin-top: 3px;
+      padding: 1px 7px;
+      height: 26px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 900;
+      color: #333;
+    }
+  }
+}

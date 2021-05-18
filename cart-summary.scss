@@ -1,0 +1,49 @@
+@import './styles/colors';
+@import './styles/mixins';
+
+  .cart {
+    &__summary {
+      background: $background-summary;
+      border-top-right-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      margin-right: -12px;
+      margin-top: -15px;
+      padding-top: 26px;
+      width: calc(30% + 7px);
+    }
+
+    &__main-title {
+      @include strong-title;
+      font-size: 12px;
+      margin-left: 17px;
+      margin-bottom: 20px;
+  
+      &::after {
+        @include  common-title-borders;
+      }
+    }
+  
+    &__main-subtitle {
+      @include light-title;
+      color: #555;
+      font-size: 10px;
+      margin: 5px 13px;
+    }
+  
+    &__products {
+      display: flex;
+      height: 80%;
+      border: solid 1px;
+    }
+  
+    &__total-cost {
+      align-self: flex-end;
+    }
+  
+    &__checkout {
+      @include main-button;
+      border: none;
+      border-radius: 3px;
+    }
+  }

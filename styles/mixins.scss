@@ -18,3 +18,26 @@
   display: flex;
   margin: 10px;
 }
+@mixin text-accented {
+  font-family: 'Fredoka One', cursive;
+  color: $text-accent;
+  margin-right: 5px;
+}
+
+@mixin common-title-borders {
+  content: '';
+  display: flex;
+  border-top: solid 1px $border-light;
+  opacity: 0.5;
+  margin-top: 13px;
+  width: 95%;
+}
+
+@mixin main-button {
+  background-color: $_blue_medium;
+  color: white;
+  font-weight: 900;
+  height: 30px;
+  margin: 4% 12%;
+  width: 78.1%;
+}

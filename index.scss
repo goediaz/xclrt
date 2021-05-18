@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap');
 @import './styles/colors';
 @import './styles/mixins';
-
+@import './product_list';
+@import './cart-summary';
 *,
 *::after,
 *::before {
@@ -21,31 +22,14 @@ body {
 }
 
 .cart {
-  &__summary {
-    background: $background-summary;
-    border-top-right-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    margin-right: -12px;
-    margin-top: -15px;
-    padding-top: 26px;
-    width: calc(30% + 30px);
-
-  }
-  &__total-cost {
-    align-self: flex-end;
-  }
   &__main-title {
     @include strong-title;
     font-size: 12px;
     margin-left: 17px;
     margin-bottom: 20px;
+
     &::after {
-      content: '';
-      display: flex;
-      border-top: solid 2px;
-      margin-top: 13px;
-      width: 95%;
+      @include  common-title-borders;
     }
   }
 
@@ -64,114 +48,22 @@ body {
     width: 728px;
     display: flex;
     flex-direction: row;
-  
-   
-  
-    .products {
-      &__container {
-        @include common-components;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        width: 71%;
-      }
-
-      // each item start
-      &__list {
-        padding: 10px 15px;
-      }
-
-      &__item {
-        @include strong-title();
-        align-items: center;
-        display: flex;
-        font-size: 12px;
-        justify-content: space-around;
-        list-style: none;
-        margin-bottom: 22px;
-        margin-left: -30px;
-
-        &-image {
-          display: block;
-          height: 100%;
-          width: 50px;
-          height: 47px;
-          border: solid 2px $border-light;
-          border-radius: 5px;
-          background: $white;
-          
-          &-container {
-            display: flex;
-            // height: 100%;
-            width: 150px;
-            border-radius: 3px;
-          }
-        }
-
-        &-name {
-          @include strong-title($text-main);
-          margin: 13px;
-          font-size: 10px;
-          width: 70px;
-
-          > strong {
-            @include light-title($text-main);
-            margin: 0;
-            min-width: 100%;
-          }
-          
-        }
-        &-counter {
-          overflow: hidden;
-          display: flex;
-          justify-content: space-between;
-          height: 35px;
-          width: 50px;
-          margin-left: 15px;
-        }
-
-        &-remove,
-        &-add {
-          background: none;
-          border: none;
-          color: $accent-color;
-          font-weight: 900;
-        }
-
-        &-quantity {
-          border: solid 2px $border-light;
-          width: 26px;
-          margin-top: 3px;
-          padding: 1px 7px;
-          height: 26px;
-          border-radius: 4px;
-          font-size: 10px;
-          font-weight: 900;
-          color: #333;
-        }
-      }
-    
-      // each item ends
-      &__main-title {
-          @include strong-title;
-          font-size: 12px;
-          margin-left: 17px;
-          margin-bottom: 20px;
-          &::after {
-            content: '';
-            display: flex;
-            border-top: solid 2px;
-            margin-top: 13px;
-            width: 95%;
-          }
-      }
-
-      &__main-subtitle {
-        @include light-title;
-        color: #555;
-        font-size: 10px;
-        margin: 5px 13px;
-      }
-    }
   }
+
+  &__main-title {
+        @include strong-title;
+        font-size: 12px;
+        margin-left: 17px;
+        margin-bottom: 20px;
+        &::after {
+          @include  common-title-borders;
+        }
+    }
+
+    &__main-subtitle {
+      @include light-title;
+      color: #555;
+      font-size: 10px;
+      margin: 5px 13px;
+    }
 }
