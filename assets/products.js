@@ -137,16 +137,6 @@ const cart = {
     }, {
       product:
       {
-        id: 1,
-        name: 'Goku POP',
-        price: 5,
-        code: 'GOKU'
-      },
-      quantity: 1,
-      totalPrice: 5
-    }, {
-      product:
-      {
         id: 10,
         name: 'Naruto POP',
         price: 5,
