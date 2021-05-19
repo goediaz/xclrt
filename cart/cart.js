@@ -41,7 +41,9 @@ function updateShoppingCartView() {
   cartContainer.innerHTML = '';
   if (store.cart.products.length > 0) {
     store.cart.products.forEach((item) => {
-      const itemNode = createDomElment('li', `${item.product?.name} x ${item.quantity} -${item.product?.price} € = ${item.totalPrice} €`, 'cart__products-item', '');
+      const subcontent = `<ul class='cart__products-overview-list'><li>${item.product?.name}</li> <li>${item.quantity}</li> <li>${item.product?.price} € </li> <li> ${item.totalPrice} €</li></ul>`
+      const itemNode = createDomElment('li', '', 'cart__products-item', '');
+      itemNode.innerHTML = subcontent;
       cartContainer.append(itemNode);
     });
   }
@@ -103,6 +105,7 @@ function drawProductsTable(products, nodeContainer) {
     mainNode.appendChild(productTotal);
     const principalNode = document.getElementById(nodeContainer);
     principalNode.appendChild(mainNode);
+    updateShoppingCartView();
   });
 }
 

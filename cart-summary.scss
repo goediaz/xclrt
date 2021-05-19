@@ -49,24 +49,33 @@
     }
   
     &__products {
+      align-self:ZZ center;
       display: flex;
       flex-direction: column;
       height: 100%;
-      // border: solid 1px grey;
       font-size: 12px;
-      width: 80%;
-      align-self: center;
       justify-self: center;
+      line-height: 0.6;
       margin-left: 10%;
-      
+      width: 80%;
       &-item {
         color: $text-dark;
         font-size: 8px;
         list-style: none;
         margin-top: 10px;
       }
+   
+      &-overview-list {
+        display: flex;
+        justify-content: space-between;
+        > li {
+          &:first-child {
+            width: 40%;
+          }
+          list-style: none;
+        }
+       }
     }
-  
     &__total-cost {
       align-self: flex-end;
     }
