@@ -34,7 +34,7 @@
       @include strong-title;
       font-size: 12px;
       margin-left: 17px;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
   
       &::after {
         @include  common-title-borders;
@@ -43,7 +43,7 @@
   
     &__main-subtitle {
       @include light-title;
-      color: #555;
+      color: $text-dark;
       font-size: 10px;
       margin: 5px 13px;
     }
@@ -60,9 +60,10 @@
       margin-left: 10%;
       
       &-item {
-        margin-top: 20px;
-        font-size: 10px;
+        color: $text-dark;
+        font-size: 8px;
         list-style: none;
+        margin-top: 10px;
       }
     }
   

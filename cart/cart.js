@@ -72,7 +72,7 @@ const handleAdd = (id, qty, price) => {
 // This is a way long mehtod, due the quantity of html elements, would be good to see if I can
 // reduce the quantity of lines.
 function drawProductsTable(products, nodeContainer) {
-  products.forEach((product) => {
+  cart.products.forEach(({ product, quantity }) => {
     const mainNode = createDomElment('li', '', 'products__item', 'id', `item-${product.id}`);
     const figure = createDomElment('figure', '', 'products__item-image-container', '', '');
     const imageNode = createDomElment('img', '', 'products__item-image', 'src', `./public/images/${product.id}.jpg`);
@@ -82,7 +82,7 @@ function drawProductsTable(products, nodeContainer) {
     const buttonPlus = createDomElment('button', '+', 'products__item-add', 'id', `button-${product.id}-plus`);
 
     const inputQty = createDomElment('input', '', 'products__item-quantity', 'id', `input-${product.id}`);
-    inputQty.value = 0;
+    inputQty.value = quantity;
     const buttonSubs = createDomElment('button', '-', 'products__item-remove', 'id', `button-${product.id}-subs`);
 
     const productPrice = createDomElment('div', product?.price, 'products__item-price', '', '');

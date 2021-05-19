@@ -42,7 +42,7 @@
   color: #212140;
   font-size: 12px;
   margin-left: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .cart__main-title::after {
@@ -62,7 +62,7 @@
   color: #555;
   font-size: 10px;
   margin: 13px;
-  color: #555;
+  color: #777;
   font-size: 10px;
   margin: 5px 13px;
 }
@@ -85,9 +85,10 @@
 }
 
 .cart__products-item {
-  margin-top: 20px;
-  font-size: 10px;
+  color: #777;
+  font-size: 8px;
   list-style: none;
+  margin-top: 10px;
 }
 
 .cart__total-cost {
