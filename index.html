@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heroes Shopping Cart</title>
-  <link rel="stylesheet" href="index.css" />
+  <meta="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes Shopping Cart</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="cart-summary.css" />
+    <link rel="stylesheet" href="product_list.css" />
 </head>
 
 <body>
   <main class="main">
-    <section class="cart__container">
+    <section class="shoppingcart__container">
       <article class="products__container">
         <h1 class="products__main-title"> Shopping cart</h1>
         <h2 class="products__main-subtitle">PRODUCT DETAILS</h2>
@@ -20,21 +20,23 @@
       </article>
       <div class="cart__summary">
         <h2 class="cart__main-title">Order</h2>
-        <article id="cart__items">
+        <article id="cart__items" class="cart__items">
           <h3 class="products__main-title" id="cart_overview">
-            TotaLItems
-            <strong className="products__total-qty">0</strong>
+            0 Items
+            <strong class="products__total-qty">0 €</strong>
           </h3>
           <ul class="cart__products" id="cart_products">
 
           </ul>
+        </article>
+        <div class="cart__checkout-container">
           <p class="products__total-cost" id="total-cost">
             Total
-            <strong className="products__total-qty">0</strong>
+            <strong class="products__total-qty">0</strong>
           </p>
 
           <button class="cart__checkout">Checkout</button>
-        </article>
+        </div>
       </div>
     </section>
   </main>

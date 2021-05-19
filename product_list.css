@@ -19,9 +19,33 @@
   color: #555;
   font-size: 10px;
   margin: 13px;
-  color: #555;
+  color: #777;
   font-size: 10px;
   margin: 5px 13px;
+}
+
+.products__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
+
+.products__main-title::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: solid 1px #9393a0;
+  opacity: 0.5;
+  margin-top: 13px;
+  width: 95%;
+}
+
+.products__total-qty {
+  float: right;
+  margin-right: 10%;
 }
 
 .products__list {

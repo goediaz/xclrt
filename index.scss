@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap');
 @import './styles/colors';
 @import './styles/mixins';
-@import './product_list';
-@import './cart-summary';
+// @import './product_list';
+// @import './cart-summary';
 *,
 *::after,
 *::before {
@@ -15,12 +15,22 @@
 body {
   background-color: #212140;
   padding: 37px;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 .main {
   display: flex;
   justify-content: center;
 }
-
+.shoppingcart__container {
+  @include common-components;
+  background-color: white;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  height: 436px;
+  width: 728px;
+}
 .cart {
   &__main-title {
     @include strong-title;
@@ -40,16 +50,6 @@ body {
     margin: 5px 13px;
   }
 
-  &__container {
-    @include common-components;
-    background-color: white;
-    border: solid 1px;
-    border-radius: 5px;
-    width: 728px;
-    display: flex;
-    flex-direction: row;
-  }
-
   &__main-title {
         @include strong-title;
         font-size: 12px;
@@ -67,3 +67,4 @@ body {
       margin: 5px 13px;
     }
 }
+

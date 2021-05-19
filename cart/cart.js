@@ -33,16 +33,18 @@ const createDomElment = (nodeName, nodeContent, nodeClass, nodeAttr, attrValue) 
 function updateShoppingCartView() {
   const node = document.getElementById('cart_overview');
   const totalItems = countTotalItems();
-  node.innerHTML = `Total Items <strong class="products__total-qty">${totalItems}<strong>>`;
   const overallCost = getOverallCost();
+  node.innerHTML = `${totalItems} Items<strong class="products__total-qty">${overallCost} €<strong>>`;
   const costNode = document.getElementById('total-cost');
   costNode.innerHTML = `TOTAL COST <strong class="cart__total-cost">${overallCost} €<strong>`;
   const cartContainer = document.getElementById('cart_products');
   cartContainer.innerHTML = '';
-  store.cart.products.forEach((item) => {
-    const itemNode = createDomElment('li', `${item.product?.name} x ${item.quantity} -${item.product?.price} € = ${item.totalPrice} €`, '', '');
-    cartContainer.append(itemNode);
-  });
+  if (store.cart.products.length > 0) {
+    store.cart.products.forEach((item) => {
+      const itemNode = createDomElment('li', `${item.product?.name} x ${item.quantity} -${item.product?.price} € = ${item.totalPrice} €`, 'cart__products-item', '');
+      cartContainer.append(itemNode);
+    });
+  }
 }
 
 const handleSubstract = (id, qty, price) => {
@@ -51,7 +53,7 @@ const handleSubstract = (id, qty, price) => {
   input.value = newQty;
   const refElement = document.getElementById(`total-price-${id}`);
   refElement.innerText = +input.value * +price;
-  addToShoppingCart(id, newQty);
+  removeFromShoppingCart(id, newQty);
   updateShoppingCartView();
 };
 

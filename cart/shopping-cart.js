@@ -27,8 +27,25 @@ function getPriceOrDiscount(product, qty = 1) {
   return value;
 }
 
-function addToShoppingCart(productId, qty) {
+function removeFromShoppingCart(productId, qty) {
   debugger;
+  const cartProducts = store.cart.products.filter((item) => item.product.id !== productId);
+  const productToSubstract = store.products.find((product) => product.id === productId);
+
+  if (qty > 0) {
+    const item = {
+      product: productToSubstract,
+      quantity: qty,
+      totalPrice: getPriceOrDiscount(productToSubstract, qty)
+    };
+    const updatedCartProducts = [...cartProducts, item];
+    store.cart = { products: updatedCartProducts };
+  } else {
+    store.cart = { products: cartProducts };
+  }
+}
+
+function addToShoppingCart(productId, qty) {
   const existingCartProduct = store.cart.products.find(({ product }) => product.id === productId);
   const productToAdd = store.products.find((product) => product.id === productId);
 
