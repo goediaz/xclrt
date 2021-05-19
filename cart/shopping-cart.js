@@ -1,7 +1,4 @@
-/* eslint-disable no-undef */
-
 function getPriceOrDiscount(product, qty = 1) {
-  // eslint-disable-next-line no-undef
   const promo = promotions.find((promotion) => promotion.code === product.code);
   let value = 0;
   switch (promo?.code) {
@@ -15,7 +12,7 @@ function getPriceOrDiscount(product, qty = 1) {
       }
       break;
     case 'NARU':
-      if (qty > 3) {
+      if (qty > 2) {
         value = product.price * qty * promo.price;
       } else {
         value = product.price * qty;
@@ -28,7 +25,6 @@ function getPriceOrDiscount(product, qty = 1) {
 }
 
 function removeFromShoppingCart(productId, qty) {
-  debugger;
   const cartProducts = store.cart.products.filter((item) => item.product.id !== productId);
   const productToSubstract = store.products.find((product) => product.id === productId);
 
@@ -64,4 +60,20 @@ function addToShoppingCart(productId, qty) {
     newCartProducts = [...newCartProducts, item];
     store.cart = { products: newCartProducts };
   }
+}
+
+function getOverallCost() {
+  let totalCost = 0;
+  for (let i = 0; i < store.cart.products.length; i += 1) {
+    totalCost += store.cart.products[i].totalPrice;
+  }
+  return totalCost;
+}
+
+function getCostWithNoDiscount() {
+  let totalCost = 0;
+  for (let i = 0; i < store.cart.products.length; i += 1) {
+    totalCost += store.cart.products[i].product.price * store.cart.products[i].quantity;
+  }
+  return totalCost;
 }

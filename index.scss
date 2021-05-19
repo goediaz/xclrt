@@ -11,9 +11,16 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
+p {
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10px;
+}
 
 body {
-  background-color: #212140;
+  background-color: $main-dark-bg;
   padding: 37px;
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
@@ -23,7 +30,7 @@ body {
 }
 .shoppingcart__container {
   @include common-components;
-  background-color: white;
+  background-color: $white;
   border: solid 1px;
   border-radius: 5px;
   display: flex;
@@ -45,7 +52,7 @@ body {
 
   &__main-subtitle {
     @include light-title;
-    color: #555;
+    color: $text-dark;
     font-size: 10px;
     margin: 5px 13px;
   }
@@ -62,7 +69,7 @@ body {
 
     &__main-subtitle {
       @include light-title;
-      color: #555;
+      color: $text-dark;
       font-size: 10px;
       margin: 5px 13px;
     }

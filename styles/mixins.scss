@@ -6,9 +6,8 @@
 }
 
 @mixin light-title($color: $text-main) {
-  font-family: 'Bilbo', cursive;
-  color: $color;
-  color: #555;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: $text-dark;
   font-size: 10px;
   margin: 13px;
 }
@@ -35,7 +34,7 @@
 
 @mixin main-button {
   background-color: $_blue_medium;
-  color: white;
+  color: $white;
   font-weight: 900;
   height: 30px;
   width: 100%;

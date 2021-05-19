@@ -30,12 +30,13 @@
       width: calc(30% + 7px);
     }
 
-    &__main-title {
-      @include strong-title;
-      font-size: 12px;
-      margin-left: 17px;
+    &__product-count {
+      color: $text-dark;
+      font-size: 10px;
+      font-weight: 300;
       margin-bottom: 5px;
-  
+      margin-left: 17px;
+ 
       &::after {
         @include  common-title-borders;
       }
@@ -49,35 +50,54 @@
     }
   
     &__products {
-      align-self:ZZ center;
+      align-self: center;
       display: flex;
       flex-direction: column;
       height: 100%;
       font-size: 12px;
       justify-self: center;
       line-height: 0.6;
-      margin-left: 10%;
-      width: 80%;
+      margin-left: 9%;
+      width: 86%;
+      &-total-cost {
+        color: $text-obscure;
+      }
+
       &-item {
         color: $text-dark;
         font-size: 8px;
         list-style: none;
         margin-top: 10px;
+        
+        &:first-child {
+          &::before {
+            content: 'DISCOUNTS';
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
+        &:last-of-type {
+          &::after {
+            @include  common-title-borders;
+            content: '  ';
+          }
+        }
       }
    
       &-overview-list {
         display: flex;
         justify-content: space-between;
+      
         > li {
           &:first-child {
-            width: 40%;
+            font-weight: 900;
           }
           list-style: none;
         }
        }
     }
     &__total-cost {
-      align-self: flex-end;
+      float: right;
     }
     
     &__checkout {

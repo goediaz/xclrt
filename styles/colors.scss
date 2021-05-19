@@ -8,12 +8,13 @@ $_grey_light1: #ececef;
 $_grey_light2: #9393a0;
 $_grey_medium1: #919199;
 $_grey_dark: #777;
+$_grey_dark2: #333;
 
 
 $white: #fff;
 
 // backgrounds
-$main-dark-blue: $_blue_dark2;
+$main-dark-bg: $_blue_dark2;
 $background-summary: $_grey_light;
 $accent-color: $_blue_medium;
 // texts
@@ -21,6 +22,7 @@ $title-main: $_blue_dark2;
 $text-main: $_grey_medium1; 
 $text-dark: $_grey_dark;
 $text-accent: $_blue_medium;
+$text-obscure: $_grey_dark2;
 // borders
 $border-light: $_grey_light2;
 $border-medium: $_grey_dark;
