@@ -21,8 +21,8 @@ p {
 
 body {
   background-color: $main-dark-bg;
-  padding: 37px;
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  padding: 37px;
 }
 .main {
   display: flex;
@@ -42,8 +42,8 @@ body {
   &__main-title {
     @include strong-title;
     font-size: 12px;
-    margin-left: 17px;
     margin-bottom: 20px;
+    margin-left: 17px;
 
     &::after {
       @include  common-title-borders;
