@@ -1,11 +1,13 @@
+const productsElements = require('./products');
+
 function getProducts() {
-  return products;
+  return productsElements.products;
 }
 function getPromotions() {
-  return promotions;
+  return productsElements.promotions;
 }
 function getCart() {
-  return cart;
+  return productsElements.cart;
 }
 
 const store = {
@@ -15,3 +17,5 @@ const store = {
   cart: getCart(),
   promotions: getPromotions()
 };
+
+exports.store = store;

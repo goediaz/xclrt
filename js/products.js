@@ -29,3 +29,7 @@ const promotions = [
     condition: 'threemore'
   }
 ];
+
+exports.products = products;
+exports.cart = cart;
+exports.promotions = promotions;
