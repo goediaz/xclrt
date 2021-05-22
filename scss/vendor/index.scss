@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap');
-@import './styles/colors';
-@import './styles/mixins';
-// @import './product_list';
-// @import './cart-summary';
+@import './colors';
+@import './mixins';
 *,
 *::after,
 *::before {
@@ -11,6 +9,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 li {
   list-style: none;
 }

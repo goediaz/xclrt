@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function countTotalItems() {
   let total = 0;
   for (let i = 0; i < store.cart.products.length; i += 1) {

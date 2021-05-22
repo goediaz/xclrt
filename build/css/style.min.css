@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo&family=Fredoka+One&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+p {
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10px; }
+
+body {
+  background-color: #212140;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  padding: 37px; }
+
+.main {
+  display: flex;
+  justify-content: center; }
+
+.shoppingcart__container {
+  padding: 15px 10px;
+  display: flex;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  height: 436px;
+  width: 728px; }
+
+.cart__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-left: 17px; }
+  .cart__main-title::after {
+    content: '';
+    display: flex;
+    border-top: solid 1px #9393a0;
+    opacity: 0.5;
+    margin-top: 13px;
+    width: 95%; }
+
+.cart__main-subtitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #777;
+  font-size: 10px;
+  margin: 13px;
+  color: #777;
+  font-size: 10px;
+  margin: 5px 13px; }
+
+.cart__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-left: 17px;
+  margin-bottom: 20px; }
+  .cart__main-title::after {
+    content: '';
+    display: flex;
+    border-top: solid 1px #9393a0;
+    opacity: 0.5;
+    margin-top: 13px;
+    width: 95%; }
+
+.cart__main-subtitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #777;
+  font-size: 10px;
+  margin: 13px;
+  color: #777;
+  font-size: 10px;
+  margin: 5px 13px; }
+
+.products__container {
+  padding: 15px 10px;
+  display: flex;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 71%; }
+
+.products__main-subtitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #777;
+  font-size: 10px;
+  margin: 13px;
+  color: #919199;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  justify-content: space-between;
+  margin: 5px 0px;
+  margin-bottom: 20px;
+  opacity: 0.7; }
+  .products__main-subtitle .products__subtitle:first-child {
+    width: 38%; }
+
+.products__main-title {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-left: 17px; }
+  .products__main-title::after {
+    content: '';
+    display: flex;
+    border-top: solid 1px #9393a0;
+    opacity: 0.5;
+    margin-top: 13px;
+    width: 95%; }
+
+.products__total-qty {
+  float: right;
+  margin-right: 10%; }
+
+.products__list {
+  padding: 10px 15px; }
+
+.products__item {
+  font-family: 'Fredoka One', cursive;
+  color: #212140;
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 22px;
+  margin-left: -30px; }
+  .products__item-image {
+    background: #fff;
+    border: solid 2px #9393a0;
+    border-radius: 5px;
+    display: block;
+    height: 47px;
+    width: 50px; }
+    .products__item-image-container {
+      border-radius: 3px;
+      display: flex;
+      width: 150px; }
+  .products__item-name {
+    font-family: 'Fredoka One', cursive;
+    color: #7350ff;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    margin: 13px;
+    width: 70px; }
+    .products__item-name > strong {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #777;
+      font-size: 10px;
+      margin: 13px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 100;
+      margin: 0;
+      min-width: 100%;
+      opacity: 0.6; }
+  .products__item-counter {
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    margin-left: 15px;
+    overflow: hidden;
+    width: 50px; }
+  .products__item-remove, .products__item-add {
+    background: none;
+    border: none;
+    color: #7350ff;
+    cursor: pointer;
+    font-weight: 900; }
+  .products__item-quantity {
+    border: solid 2px #9393a0;
+    border-radius: 4px;
+    color: #333;
+    font-size: 10px;
+    font-weight: 900;
+    height: 26px;
+    padding: 1px 7px;
+    margin-top: 3px;
+    width: 26px; }
+
+.cart__container {
+  padding: 15px 10px;
+  display: flex;
+  margin: 10px;
+  background-color: white;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 728px; }
+
+.cart__items {
+  height: 67%; }
+
+.cart__summary {
+  background: #f3f3f3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% + 30px);
+  margin-right: -12px;
+  margin-top: -15px;
+  padding-top: 26px;
+  width: calc(30% + 7px); }
+
+.cart__product-count {
+  color: #777;
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  margin-left: 17px; }
+  .cart__product-count::after {
+    content: '';
+    display: flex;
+    border-top: solid 1px #9393a0;
+    opacity: 0.5;
+    margin-top: 13px;
+    width: 95%; }
+
+.cart__main-subtitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #777;
+  font-size: 10px;
+  margin: 13px;
+  color: #777;
+  font-size: 10px;
+  margin: 5px 13px; }
+
+.cart__products {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  height: 100%;
+  justify-self: center;
+  line-height: 0.6;
+  margin-left: 9%;
+  width: 86%; }
+  .cart__products-total-cost {
+    color: #333; }
+  .cart__products-item {
+    color: #777;
+    font-size: 8px;
+    list-style: none;
+    margin-top: 10px; }
+    .cart__products-item:first-child::before {
+      content: 'DISCOUNTS';
+      display: block;
+      margin-bottom: 20px; }
+    .cart__products-item:last-of-type::after {
+      content: '';
+      display: flex;
+      border-top: solid 1px #9393a0;
+      opacity: 0.5;
+      margin-top: 13px;
+      width: 95%;
+      content: '  '; }
+  .cart__products-overview-list {
+    display: flex;
+    justify-content: space-between; }
+    .cart__products-overview-list > li {
+      list-style: none; }
+      .cart__products-overview-list > li:first-child {
+        font-weight: 900; }
+
+.cart__total-cost {
+  float: right; }
+
+.cart__checkout {
+  background-color: #7350ff;
+  color: #fff;
+  font-weight: 900;
+  height: 30px;
+  width: 100%;
+  border: none;
+  font-size: 10px;
+  margin: 10% 3%;
+  width: 97%; }
+  .cart__checkout-container {
+    margin-left: 10%;
+    width: 80%; }
